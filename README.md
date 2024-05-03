@@ -21,6 +21,19 @@ $ tiv -d foo.img > .bitmap 2> .size
 $ stiv `cat .size` < .bitmap
 ```
 
+How to build?
+---------------
+
+First create the Dockerized build environment:
+```
+docker build -t libstiv:latest -f Build.Dockerfile .
+```
+
+Then build the project with:
+```
+docker run --rm -v $(pwd):/app -it libstiv:latest
+```
+
 Author
 ------
 

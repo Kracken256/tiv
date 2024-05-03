@@ -2,7 +2,7 @@ VALAC=valac
 DESTDIR?=/
 PREFIX?=usr
 #CFLAGS += -I/opt/local/include -I/usr/local/include
-CFLAGS += $(shell pkg-config --cflags libjpeg)
+CFLAGS += $(shell pkg-config --cflags libjpeg) -Wall -Wextra -pedantic -std=c99 -O3 -ffast-math 
 #JPEGLIBS += -L/opt/local/lib -L/usr/local/lib -L/usr/local/Cellar -ljpeg
 JPEGLIBS += $(shell pkg-config --libs libjpeg)
 
